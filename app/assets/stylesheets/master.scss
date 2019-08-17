@@ -30,6 +30,32 @@ h1, h2, h3, h4, h5, h6, .navbar {
   font-weight: 200;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
+
 .btn {
   border-radius: 0;
+}
+
+.feature{
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+body {
+  background: image_url('bg.jpg');
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+.navbar-inverse .navbar-brand {
+  color: #DE2B1F;
+  font-family: 'NexaRustSans-Black-Free', sans-serif;
+  font-size: 26px;
+}
+
+.navbar .navbar-inverse {
+  background: image_url('what-the-hex-dark.png');
+  box-shadow: 10px 10px 5px grey;
+  margin-bottom: 0;
 }
