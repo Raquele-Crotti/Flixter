@@ -60,6 +60,12 @@ body {
   margin-bottom: 0;
 }
 
+.navbar-toggler {
+  color: #DE2B1F;
+  font-family: 'NexaRustSans-Black-Free', sans-serif;
+  font-size: 26px;
+}
+
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -83,4 +89,9 @@ body {
 
 .clr {
   clear: both;
+}
+
+.img-fluid {
+  max-width: 800px;
+  max-height: 500px;
 }

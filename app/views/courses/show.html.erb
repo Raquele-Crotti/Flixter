@@ -3,6 +3,10 @@
 <div class="booyah-box col-10 offset-1">
   <h1><%= @course.title %></h1>
   <br />
+  <% if @course.image.url %>
+   <%= image_tag @course.image.url, class: 'img-fluid' %>
+  <% end %>
+  <br />
   <div class="row">
     <div class="col-sm-4 col-12 text-center">
       <span class="badge badge-default">
