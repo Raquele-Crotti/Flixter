@@ -1,8 +1,19 @@
 <script>
   $(function() {
     $('.new-lesson-button').click(function( event ) {
-      var lessonURL = $( event.target).data('lesson-url');
-      $('#newLessonForm').attr('action', lessonURL);
+      var lessonUrl = $( event.target).data('lesson-url');
+      $('#newLessonForm').attr('action', lessonUrl);
+    });
+
+       $('.sections').sortable({
+      update: function( event, ui ) {
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { section: { row_order_position: ui.item.index() } }
+        });
+      }
     });
 
     $(function() {
@@ -36,8 +47,8 @@
   </div>
 
   <ul class="sections">
-    <% current_course.sections.each do |section| %>
-      <li class="section-li">
+    <% current_course.sections.rank(:row_order).each do |section| %>
+      <li data-update-url="<%= instructor_section_path(section) %>" class="section-li">
         <div class="header float-left">
           <span class="fa fa-ellipsis-v"></span>
           <%= section.title %>
@@ -69,7 +80,6 @@
                   </p>
                 </div>
               </div>
-              <br class="clr" />
             </li>
           <% end %>
         </ul>
