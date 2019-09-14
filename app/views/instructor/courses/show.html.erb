@@ -1,33 +1,34 @@
 <script>
   $(function() {
     $('.new-lesson-button').click(function( event ) {
-      var lessonUrl = $( event.target).data('lesson-url');
-      $('#newLessonForm').attr('action', lessonUrl);
+      var lessonURL=  $(event.target).data('lesson-url');
+      $('#newLessonForm').attr('action', lessonURL);
     });
-
-       $('.sections').sortable({
-      update: function( event, ui ) {
-        $.ajax({
-          type: 'PUT',
-          url: ui.item.data('update-url'),
-          dataType: 'json',
-          data: { section: { row_order_position: ui.item.index() } }
-        });
-      }
-    });
-
-    $(function() {
+  });
+  $(function() {
     $('.lessons').sortable({
       update: function( event, ui ) {
         $.ajax({
           type: 'PUT',
           url: ui.item.data('update-url'),
-          dataType: 'json',
-          data: { lesson: { row_order_position: ui.item.index() } }
+          dataType: 'json', 
+          data: { lesson: { row_order_position: ui.item.index() }}
         });
       }
     });
-   });
+  });
+  $(function() {
+    $('.sections').sortable({
+      update: function( event, ui ) {
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { section: { row_order_position: ui.item.index() }}
+        });
+      }
+    });
+  });
 </script>
 
 <br />
@@ -40,6 +41,8 @@
   <br class="clr" />
 
   <div class="text-center">
+
+
     <!-- Button trigger modal for new section -->
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
       Add a new section...
@@ -55,7 +58,7 @@
         </div>
 
         <!-- Button trigger modal for new lesson-->
-        <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal"-lesson-url="<%= instructor_section_lessons_path(section) %>" data>
+        <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>" data>
         Add a new lesson...
         </button>
 
