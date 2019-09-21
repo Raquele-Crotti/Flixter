@@ -55,7 +55,7 @@ body {
   font-size: 26px;
 }
 
-.navbar .navbar-inverse {
+.navbar {
   background: image_url('what-the-hex-dark.png');
   box-shadow: 10px 10px 5px grey;
   margin-bottom: 0;
@@ -66,6 +66,11 @@ body {
   font-family: 'NexaRustSans-Black-Free', sans-serif;
   font-size: 26px;
 }
+
+.navbar-link {
+  background: image_url('icon.png');
+}
+
 
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
