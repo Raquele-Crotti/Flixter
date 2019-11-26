@@ -1,5 +1,5 @@
 # Flixter - A Video Streaming Platform
-A two sided video streaming marketplace platform, featuring credit card payment capabilities, user role management, complex user interfaces and advanced database relationships.  Integration of Javascript, JSON, Ajax requests and secure payment capabilities using Stride. HTML5, CSS, Ruby, Rails, Algorithms, Javascript 
+A two sided video streaming marketplace platform, featuring credit card payment capabilities, user role management, complex user interfaces and advanced database relationships.  Integration of Javascript, JSON, Ajax requests and secure payment capabilities using Stripe. HTML5, CSS, Ruby, Rails, Algorithms, Javascript 
 
 ## Table of contents
 * [General info](#general-info)
@@ -18,7 +18,8 @@ Project is created with:
 * [ruby '2.5.3'](https://github.com/university-bootcamp/coding-environment/blob/master/README.md#coding-environment-installation-guide)
 * gem 'rails', '~> 5.2.1'
 * [activerecord 6.0.1](https://rubygems.org/gems/activerecord/versions/5.0.0.1)
-* [Heroku](https://signup.heroku.com/t/platform?c=70130000001xDpdAAE&gclid=CjwKCAiAzuPuBRAIEiwAkkmOSM8vVAtL7RKLqoIVrshH7VuxMysxD2e1555A3dwyDU4sOSOxy6zujxoCXBIQAvD_BwE* [gem 'bootstrap', '~> 4.3', '>= 4.3.1'](https://github.com/twbs/bootstrap-rubygem)
+* [Heroku](https://signup.heroku.com/t/platform?c=70130000001xDpdAAE&gclid=CjwKCAiAzuPuBRAIEiwAkkmOSM8vVAtL7RKLqoIVrshH7VuxMysxD2e1555A3dwyDU4sOSOxy6zujxoCXBIQAvD_BwE)
+* [gem 'bootstrap', '~> 4.3', '>= 4.3.1'](https://github.com/twbs/bootstrap-rubygem)
 * [gem 'pg', '>= 0.18', '< 2.0'](https://www.ibm.com/cloud/databases-for-postgresql)
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 * [CSS](https://www.w3schools.com/html/html_css.asp)
@@ -43,14 +44,13 @@ Create a new application that uses postgres
   ```
   $ rails new flixter --database=postgresql
   ```
-Open newly created Flixter application in your text editor
-Go to database.yml file and edit:
+Open newly created Flixter application in your text editor and go to database.yml file and edit:
   ```
   username: postgres
   password: password
   host: localhost
   ```
-  comment out last two lines on file for username and password.
+    comment out last two lines on file for username and password.
 Change directory into your Flixter project
   ```
   $ cd /vagrant/src/flixter
@@ -69,9 +69,9 @@ In the second terminal window, type following command to move into Flixter folde
   ```
 Set up web development pipeline:
   
-  create new Github repository
+    create new Github repository
 
-  create project in heroku and then deploy it to heroku
+    create project in heroku and then deploy it to heroku
 
 
 **Build the Landing Page**
@@ -199,6 +199,7 @@ Edit app/controllers/instructor/courses_controller.rb and add the entire create 
 ```
 
 **Building a Simple Instructor Show Page**
+
 Add the show action into our instructor/courses controller and load the correct course from our database. We will do this by looking up the course by its id.
 ```
   before_action :authenticate_user!
@@ -223,7 +224,7 @@ Add the show action into our instructor/courses controller and load the correct 
   end
 end
 ```
-Create a simple view in order to ensure thigns are working:
+Create a simple view in order to ensure things are working:
 Create a new file app/views/instructor/courses/show.html.erb and make it look like this:
 ```
 <br />
