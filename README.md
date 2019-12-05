@@ -16,7 +16,7 @@ Similar to the Udemy platform, this application hosts an array of lessons that s
 ## Technologies 
 Project is created with:
 * [ruby '2.5.3'](https://github.com/university-bootcamp/coding-environment/blob/master/README.md#coding-environment-installation-guide)
-* gem 'rails', '~> 5.2.1'
+* [gem 'rails', '~> 5.2.3'](https://github.com/rails/rails)
 * [activerecord 6.0.1](https://rubygems.org/gems/activerecord/versions/5.0.0.1)
 * [Heroku](https://signup.heroku.com/t/platform?c=70130000001xDpdAAE&gclid=CjwKCAiAzuPuBRAIEiwAkkmOSM8vVAtL7RKLqoIVrshH7VuxMysxD2e1555A3dwyDU4sOSOxy6zujxoCXBIQAvD_BwE)
 * [gem 'bootstrap', '~> 4.3', '>= 4.3.1'](https://github.com/twbs/bootstrap-rubygem)
